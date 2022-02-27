@@ -1,14 +1,14 @@
 <template>
     <div class="demos">
-        <div class="demo" @click="activeC1" :class="{ c1: classActivated.c1 }">CLICK!</div>
-        <div class="demo" @click="activeC2" :class="{ c2: classActivated.c2 }">CLICK!</div>
-        <div class="demo" @click="activeC3" :class="{ c3: classActivated.c3 }">CLICK!</div>
+        <div class="demo" @click="toggleActiveC1" :class="{ c1: classActivated.c1 }">CLICK!</div>
+        <div class="demo" @click="toggleActiveC2" :class="{ c2: classActivated.c2 }">CLICK!</div>
+        <div class="demo" @click="toggleActiveC3" :class="{ c3: classActivated.c3 }">CLICK!</div>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'Css',
+    name: 'CssDinamicA',
     data() {
         return {
             classActivated: {
@@ -19,13 +19,13 @@ export default {
         };
     },
     methods: {
-        activeC1() {
+        toggleActiveC1() {
             this.classActivated.c1 = !this.classActivated.c1;
         },
-        activeC2() {
+        toggleActiveC2() {
             this.classActivated.c2 = !this.classActivated.c2;
         },
-        activeC3() {
+        toggleActiveC3() {
             this.classActivated.c3 = !this.classActivated.c3;
         },
     },
